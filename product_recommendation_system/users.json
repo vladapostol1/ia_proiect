@@ -1,0 +1,16 @@
+[
+    {
+        "id": "vlad",
+        "categories": [
+            "electronics"
+        ],
+        "purchase_history": [
+            "mouse",
+            "laptop"
+        ],
+        "price_range": [
+            20.0,
+            1440.0
+        ]
+    }
+]

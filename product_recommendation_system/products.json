@@ -1,0 +1,92 @@
+[
+    {
+        "id": "product1",
+        "name": "mouse",
+        "category": "electronics",
+        "price": 25
+    },
+    {
+        "id": "product2",
+        "name": "keyboard",
+        "category": "electronics",
+        "price": 50
+    },
+    {
+        "id": "product3",
+        "name": "monitor",
+        "category": "electronics",
+        "price": 150
+    },
+    {
+        "id": "product4",
+        "name": "laptop",
+        "category": "electronics",
+        "price": 1200
+    },
+    {
+        "id": "product5",
+        "name": "gaming chair",
+        "category": "furniture",
+        "price": 300
+    },
+    {
+        "id": "product6",
+        "name": "office desk",
+        "category": "furniture",
+        "price": 400
+    },
+    {
+        "id": "product7",
+        "name": "headphones",
+        "category": "electronics",
+        "price": 100
+    },
+    {
+        "id": "product8",
+        "name": "ebook reader",
+        "category": "books",
+        "price": 120
+    },
+    {
+        "id": "product9",
+        "name": "fiction book",
+        "category": "books",
+        "price": 20
+    },
+    {
+        "id": "product10",
+        "name": "fitness tracker",
+        "category": "fitness",
+        "price": 80
+    },
+    {
+        "id": "product11",
+        "name": "dumbbells",
+        "category": "fitness",
+        "price": 50
+    },
+    {
+        "id": "product12",
+        "name": "yoga mat",
+        "category": "fitness",
+        "price": 30
+    },
+    {
+        "id": "product13",
+        "name": "smartphone",
+        "category": "electronics",
+        "price": 700
+    },
+    {
+        "id": "product14",
+        "name": "lamp",
+        "category": "furniture",
+        "price": 60
+    },
+    {
+        "id": "product15",
+        "name": "backpack",
+        "category": "accessories",
+        "price": 45
+    }
+]
