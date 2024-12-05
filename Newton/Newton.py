@@ -1,52 +1,53 @@
 import math
 
-def binomial_coefficient(n, k):
+
+def coeficient_binomial(n, k):
     return math.comb(n, k)
+
 
 def newton_binomial(a, b, n):
     steps = []
 
-    steps.append(f"Premisa: Formula generală pentru Binomul lui Newton este:")
-    steps.append(f"(a + b)^n = ∑(k=0 până la n) [C(n, k) * a^(n-k) * b^k]\n")
+    steps.append(f"Premisa formula generala: \n")
+    steps.append(f"(a + b) ^ n = Σ(k = 0 -> n) [C(n, k) * a ^ (n - k) * b ^ k]\n")
 
     if n == 1:
-        steps.append("Caz de bază: Pentru n=1, formula devine direct:")
-        steps.append("(a + b)^1 = a + b")
+        steps.append("Cazul de baza: n = 1, formula devine: \n")
+        steps.append("(a + b) ^ 1 = a + b")
         return steps, f"{a} + {b}"
 
-    steps.append(f"Calculăm dezvoltarea pentru n={n}. Vom determina fiecare termen al sumei pas cu pas:")
+    steps.append(f"Dezvoltare pentru n = {n}. \n")
     terms = []
     for k in range(n + 1):
-        coef = binomial_coefficient(n, k)
-        steps.append(f"Pasul {k + 1}: Calculăm termenul pentru k={k}.")
-        steps.append(f"Coeficientul binomial C({n}, {k}) = {coef}")
+        coef = coeficient_binomial(n, k)
+        steps.append(f"\nPasul {k + 1}: Termen pentru k = {k}")
+        steps.append(f"Coeficient binomial C({n}, {k}) = {coef}")
 
-        term = f"{coef} * a^{n - k} * b^{k}"
-        steps.append(f"Termenul este: {term}")
+        term = f"{coef} * a ^ {n - k} * b ^ {k}"
+        steps.append(f"Termen: {term}")
 
         terms.append(term)
-        steps.append(f"Adăugăm termenul în expansiune.\n")
+
+        # steps.append(f"Adaugam termenul")
 
     result = " + ".join(terms)
-    steps.append("Toți termenii au fost calculați. Expansiunea completă este:")
+    steps.append("Termenii au fost calculati. Expansiune completa:")
     steps.append(result)
     return steps, result
 
 
 def main():
-    print("Demonstrație: Binomul lui Newton prin raționament înainte\n")
-    a = input("Introduceți valoarea lui a: ")
-    b = input("Introduceți valoarea lui b: ")
-    n = int(input("Introduceți valoarea lui n: "))
+    a = input("Valoare a: ")
+    b = input("Valoare b: ")
+    n = int(input("Valoare n: "))
 
     steps, result = newton_binomial(a, b, n)
 
-    print("\nPașii demonstrației:")
+    print("Demonstratie: ")
     for step in steps:
-        print("- " + step)
+        print("\n" + step)
 
-    print("\nRezultatul final:")
-    print(result)
+    print("\nRezultat final: " + result)
 
 
 if __name__ == "__main__":
