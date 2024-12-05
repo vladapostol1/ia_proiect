@@ -28,8 +28,6 @@ def newton_binomial(a, b, n):
 
         terms.append(term)
 
-        # steps.append(f"Adaugam termenul")
-
     result = " + ".join(terms)
     steps.append("Termenii au fost calculati. Expansiune completa:")
     steps.append(result)
