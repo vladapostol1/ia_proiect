@@ -89,7 +89,7 @@ def recommend():
     users = load_data(USERS_DB)
     products = load_data(PRODUCTS_DB)
     
-    user_id = input("Reccommend for user(user_id): ")
+    user_id = input("Recommend for user(user_id): ")
     user = next((u for u in users if u["id"] == user_id), None)
     
     if not user:
@@ -99,6 +99,18 @@ def recommend():
     recommendations = generate_recommendations(user, products)
     print("Recommendations:", recommendations)
 
+def get_user_data():
+    users = load_data(USERS_DB)
+
+    user_id = input("Insert the user_id: ")
+    user = next((u for u in users if u["id"] == user_id), None)
+
+    if not user:
+        print("The user id was not found")
+        return
+    
+    print("User data: ",user)
+
 def main():
     while True:
         print("\nOpțiuni:")
@@ -106,6 +118,7 @@ def main():
         print("2. Add product")
         print("3. New purchase")
         print("4. Recommend")
+        print("5. History")
         print("0. Exit")
         
         choice = input("Choose an option: ")
@@ -117,6 +130,8 @@ def main():
             add_purchase()
         elif choice == "4":
             recommend()
+        elif choice == "5":
+            get_user_data()
         elif choice == "0":
             print("Byeeeee!")
             break
