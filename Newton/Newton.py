@@ -6,6 +6,9 @@ def coeficient_binomial(n, k):
 
 
 def newton_binomial(a, b, n):
+    if(n < 0):
+        raise Exception("valoarea lui n trebuie sa fie mai mare sau egala cu 0.")
+
     steps = []
 
     steps.append(f"Premisa formula generala: \n")
@@ -53,9 +56,6 @@ def main():
     a = float(input("Introduceți valoarea lui a: "))
     b = float(input("Introduceți valoarea lui b: "))
     n = int(input("Introduceți valoarea lui n: "))
-
-    if(n < 0):
-        raise Exception("valoarea lui n trebuie sa fie mai mare sau egala cu 0.")
 
     steps, expanded_result, numeric_result = newton_binomial(a, b, n)
 
