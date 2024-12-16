@@ -24,14 +24,14 @@ products_data = [
     {"id": "product4", "name": "dumbbells", "category": "fitness", "price": 50}
 ]
 
-def test_matches_category():
+def test_category():
     user = users_data[0]
     product = products_data[1]
     assert matches_category(user, product) == True 
     product["category"] = "books"
     assert matches_category(user, product) == False 
 
-def test_matches_price_range():
+def test_price_range():
     user = users_data[0]
     product = products_data[1]
     assert matches_price_range(user, product) == True
@@ -52,7 +52,7 @@ def test_generate_recommendations():
     assert "mouse" not in recommendations
     assert "book" not in recommendations
 
-def test_generate_recommendations_no_user():
+def test_generate_recommendations_wrong():
     user = {"id": "unknown", "categories": [], "purchase_history": [], "price_range": [0, 0]}
     recommendations = generate_recommendations(user, products_data)
     assert recommendations == []

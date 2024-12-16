@@ -28,7 +28,7 @@ def test__n3():
     )
     assert numeric_result == expected_numeric_result
 
-def test_ase_n0():
+def test__n0():
     steps, expanded_result, numeric_result = newton_binomial(5, 5, 0)
     assert expanded_result == "1 * 5^0 * 5^0"
     assert numeric_result == 1.0
